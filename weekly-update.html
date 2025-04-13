@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Updates | ARAVIND A</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="weekly-update.html">Weekly Update</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="weekly-section">
+        <h1>Weekly Updates</h1>
+        <div id="updates-container"></div>
+    </section>
+
+    <script>
+        fetch('updates/updates.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('updates-container');
+                data.forEach(update => {
+                    const div = document.createElement('div');
+                    div.classList.add('update-item');
+                    div.innerHTML = `
+                        <h2>${update.week}</h2>
+                        <img src="${update.image}" alt="${update.week}" class="update-image">
+                        <p>${update.text}</p>
+                    `;
+                    container.appendChild(div);
+                });
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+[
+    {
+        "week": "Week 1",
+        "text": "I developed a project dashboard using HTML and CSS for the frontend and Python for the backend. The system collects and displays real-time data from an Airtable database, allowing efficient monitoring and control of the water distribution process.",
+        "image": "images/week1.png"
+    },
+    {
+        "week": "Week 2",
+        "text": "Finished coding flow sensor logic and validated with test data.",
+        "image": "images/week2.jpg"
+    },
+    {
+        "week": "Week 3",
+        "text": "Integrated Airtable data logging and verified real-time entries.",
+        "image": "images/week3.jpg"
+    }
+]
